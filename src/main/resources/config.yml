@@ -1,0 +1,170 @@
+# ========================================================
+# localhost-genetyka - Innowacyjny System Mutacji DNA Gracza
+# ========================================================
+
+prefix: "&8[&b&lGenetyka&8] &r"
+
+# Ustawienia Punktow Ewolucji (DNA Points)
+evolution:
+  points-per-player-kill: 25
+  points-per-mob-kill: 2
+  upgrade-cost-level-2: 100
+  upgrade-cost-level-3: 250
+  unlock-slot-2-cost: 150
+  unlock-slot-3-cost: 350
+
+# Strzykawka Ekstrakcyjna (do pobierania DNA z mobow)
+extractor:
+  name: "&b&lStrzykawka DNA &7(Ekstraktor)"
+  material: PRISMARINE_SHARD
+  custom-model-data: 0
+  base-drop-chance: 25 # 25% szansy na ekstrakcje DNA przy zabiciu moba strzykawka
+  lore:
+    - "&7Zaawansowany przyrzad laboratoryjny sluzacy"
+    - "&7do bezpiecznego pobierania probek DNA z organizmow."
+    - ""
+    - " &8» &eDzialanie: &7Zabij moba majac strzykawke w rece"
+    - " &8» &bSzansa na DNA: &f%chance%%"
+    - ""
+    - "&b&oPrzedmiot Laboratoryjny"
+
+# Konfiguracja poszczegolnych genow i mutacji
+mutations:
+  warden:
+    name: "&3&lMutacja Wardena"
+    material: ECHO_SHARD
+    sonar-radius: 18 # kratki zasięgu sonaru na kucaniu
+    sonar-cooldown: 8 # sekundy
+    sonar-glowing-duration: 4 # sekundy podswietlenia wrogow
+    sonic-boom-cooldown: 20 # sekundy
+    sonic-boom-damage: 8.0 # obrazenia ciosu dzwiekowego
+    lore:
+      - "&7Geny pradawnego stwora z glebin Sculk."
+      - ""
+      - " &8» &3Pasywka (Sonar): &7Kucniecie wysyla fale sonaru,"
+      - "   &7podswietlajaca graczy i moby w promieniu &b%sonar_radius% kratek"
+      - " &8» &bAktywka (Shift+PPM): &7Wystrzeliwuje potezny &3Sonic Boom"
+      - ""
+      - "&3&oPoziom Mutacji: &f%level%/3"
+
+  enderman:
+    name: "&5&lMutacja Endermana"
+    material: ENDER_EYE
+    dodge-chance-lvl1: 15 # % szans na unik strzaly
+    dodge-chance-lvl2: 25
+    dodge-chance-lvl3: 35
+    no-pearl-damage: true
+    lore:
+      - "&7Geny istoty z Kresu potrafiacej zaginac przestrzen."
+      - ""
+      - " &8» &5Pasywka (Unik): &7%dodge%% szans na automatyczne"
+      - "   &7unikniecie pocisku poprzez mini-teleportacje"
+      - " &8» &dPerly Enderu: &aBrak obrazen od upadku perly!"
+      - ""
+      - "&5&oPoziom Mutacji: &f%level%/3"
+
+  creeper:
+    name: "&a&lMutacja Creepera"
+    material: GUNPOWDER
+    blast-power: 3.5
+    blast-cooldown: 45
+    lore:
+      - "&7Wybuchowy kod genetyczny napełniony prochem."
+      - ""
+      - " &8» &aPasywka (Wybuch Zemsty): &7Gdy Twoje HP spadnie"
+      - "   &7ponizej 20%%, wyzwalasz potezna eksplozje odpychajaca"
+      - "   &7wrogow i oslepiajaca ich dymem!"
+      - " &8» &7Cooldown wybuchu: &c%cooldown%s"
+      - ""
+      - "&a&oPoziom Mutacji: &f%level%/3"
+
+  pajak:
+    name: "&c&lMutacja Pajaka"
+    material: SPIDER_EYE
+    poison-chance: 20
+    poison-duration: 4
+    web-immunity: true
+    lore:
+      - "&7Pajeczy instynkt oraz toksyczny jad w Twoich zylach."
+      - ""
+      - " &8» &cPasywka (Jad): &720%% szans na zatrucie wroga przy ciosie"
+      - " &8» &fPajeczyny: &aCalkowita odpornosc &7na spowolnienie w pajeczynach"
+      - " &8» &eWspinaczka: &7Kucajac przy scianie mozesz sie po niej wspinac!"
+      - ""
+      - "&c&oPoziom Mutacji: &f%level%/3"
+
+  golem:
+    name: "&f&lMutacja Zelaznego Golema"
+    material: IRON_BLOCK
+    knockback-resistance-lvl1: 30 # % redukcji odrzutu
+    knockback-resistance-lvl2: 50
+    knockback-resistance-lvl3: 75
+    bonus-health: 4.0 # 2 dodatkowe serca (4 HP)
+    earthquake-fall-blocks: 4
+    lore:
+      - "&7Cialo wzmocnione strukturą zlitej stali."
+      - ""
+      - " &8» &fOdpornosc na odrzut: &e+%kb_res%%% redukcji knockbacku"
+      - " &8» &cZywotnosc: &a+2 dodatkowe stale serca (4 HP)"
+      - " &8» &7Trzesienie ziemi: &7Upadek z gory wywoluje fale uderzeniowa"
+      - ""
+      - "&f&oPoziom Mutacji: &f%level%/3"
+
+  blaze:
+    name: "&6&lMutacja Blaze'a"
+    material: BLAZE_ROD
+    fire-immunity: true
+    thorns-burn-seconds: 4
+    lore:
+      - "&7Ognista esencja potwora z Piekiel."
+      - ""
+      - " &8» &6Odpornosc: &aCalkowita niewrazliwosc &7na ogien i lawe"
+      - " &8» &cPłomienne Cialo: &7Wrogowie atakujacy Cie zostaja podpaleni"
+      - ""
+      - "&6&oPoziom Mutacji: &f%level%/3"
+
+  wither:
+    name: "&8&lMutacja Withera"
+    material: WITHER_SKELETON_SKULL
+    wither-chance: 25
+    wither-duration: 4
+    lore:
+      - "&7Mroczna mutacja niszczaca tkanke kazdego celu."
+      - ""
+      - " &8» &8Mroczny Uwiad: &725%% szans na nalozenie efektu Wither II"
+      - " &8» &7Niewrazliwosc: &aCalkowita odpornosc na efekt Withera"
+      - ""
+      - "&8&oPoziom Mutacji: &f%level%/3"
+
+  phantom:
+    name: "&9&lMutacja Phantoma"
+    material: PHANTOM_MEMBRANE
+    lore:
+      - "&7Geny stworzenia nocy poruszajacego sie bezszelestnie w powietrzu."
+      - ""
+      - " &8» &9Spadochron Cienia: &7Kucajac podczas spadania w powietrzu"
+      - "   &7aktywujesz wolne opadanie i plynne szybowanie!"
+      - ""
+      - "&9&oPoziom Mutacji: &f%level%/3"
+
+# Komunikaty
+messages:
+  prefix: "&8[&b&lGenetyka&8] &r"
+  player-only: "&cTa komenda jest dostepna tylko dla graczy!"
+  no-permission: "&cBrak uprawnien do tej komendy!"
+  dna-extracted: "&a✔ Pomyślnie pobrano próbkę: &e%dna%&a!"
+  slot-locked: "&cTen slot chromosomu jest zablokowany! Koszt odblokowania: &e%cost% Punktow Ewolucji&c."
+  slot-unlocked: "&a✔ Pomyślnie odblokowano nowy slot chromosomu!"
+  mutation-equipped: "&a✔ Aktywowano mutacje: &e%mutation% &7(Poziom %level%)!"
+  mutation-unequipped: "&c✖ Dezaktywowano mutacje: &e%mutation%&c."
+  not-enough-points: "&cBrakuje Ci Punktow Ewolucji! Wymagane: &e%cost% pkt&c. Posiadasz: &b%points% pkt&c."
+  mutation-upgraded: "&a✔ Ulepszono mutacje &e%mutation% &ana &bPoziom %level%&a!"
+  mutation-max-level: "&cTa mutacja osiagnela juz maksymalny (3) poziom!"
+  sonar-activated: "&3&l[SONAR] &7Fale sonaru wykryly &b%count% &7istot w poblizu!"
+  sonar-cooldown: "&cSonar laduje sie... Odczekaj jeszcze &e%time%s&c."
+  sonic-boom-cast: "&3&l[SONIC BOOM] &7Wystrzeliles niszczycielski promien dzwiekowy!"
+  sonic-boom-cooldown: "&cSonic Boom laduje sie... Odczekaj &e%time%s&c."
+  creeper-blast: "&a&l[WYBUCH ZEMSTY] &7Eksplodowales, odpychajac agresorow!"
+  spider-climb: "&c&l[WSPINACZKA] &7Wspinasz sie po pionowej scianie!"
+  points-added: "&aDodano &e%amount% Punktow Ewolucji &7(Stan: &b%total% pkt&7)."
+  item-given: "&aNadano przedmiot laboratoryjny &e%item% &7graczowi &b%player%&7."

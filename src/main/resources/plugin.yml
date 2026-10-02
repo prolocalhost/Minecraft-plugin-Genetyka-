@@ -1,0 +1,24 @@
+name: localhost-genetyka
+version: '${version}'
+
+main: pl.localhost.genetyka.Main
+api-version: '1.20'
+load: POSTWORLD
+
+authors: [ Localhost ]
+website:
+  discord: localhost_127001
+
+commands:
+  genetyka:
+    aliases: [dna, mutacje, mutant, mutacja]
+    description: Glowna komenda systemu mutacji genetycznych i DNA
+    permission: genetyka.use
+
+permissions:
+  genetyka.use:
+    description: Pozwala na korzystanie z laboratorium genetycznego i wlasnych mutacji
+    default: true
+  genetyka.admin:
+    description: Pozwala na zarzadzanie genetyka graczy, punktami i przedmiotami
+    default: op
